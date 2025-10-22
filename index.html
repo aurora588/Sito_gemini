@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderlust - Viaggi Avventura per Giovani Esploratori</title>
+    <!-- Caricamento di Tailwind CSS per uno styling rapido e responsive -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Impostazioni di base e font */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fd; /* Sfondo molto chiaro */
+        }
+        /* Definizione dei colori Azurrinni tenui */
+        .color-primary { --tw-bg-opacity: 1; background-color: rgba(186, 230, 253, var(--tw-bg-opacity)); } /* Light Blue 200 */
+        .color-secondary { --tw-text-opacity: 1; color: rgba(59, 130, 246, var(--tw-text-opacity)); } /* Blue 500 */
+        .color-dark-text { color: #1e3a8a; } /* Dark Blue 800 per il testo */
+
+        /* Stile per l'Hero Section */
+        #hero {
+            /* HO INSERITO QUI L'URL DI UN'IMMAGINE REALE PER LO SFONDO D'IMPATTO */
+            background-image: url('https://placehold.co/1920x800/22c55e/ffffff?text=Spiaggia+Tropicale+Paradise');
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+            min-height: 500px;
+        }
+
+        /* Stile per le card degli Itinerari */
+        .itinerary-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .itinerary-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(30, 58, 138, 0.15); /* Ombra Blu Scuro */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navbar -->
+    <header class="bg-white/95 backdrop-blur-sm shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold color-dark-text tracking-wider">WANDERLUST</div>
+            <nav class="space-x-8 hidden md:flex">
+                <a href="#itinerari" class="text-gray-600 hover:color-secondary font-medium transition duration-150">Itinerari</a>
+                <a href="#mete" class="text-gray-600 hover:color-secondary font-medium transition duration-150">Mete Paradisiache</a>
+                <a href="#consigli" class="text-gray-600 hover:color-secondary font-medium transition duration-150">Consigli & Safety</a>
+                <a href="#commenti" class="text-gray-600 hover:color-secondary font-medium transition duration-150">La Nostra Community</a>
+                <a href="#contatti" class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition duration-150 shadow-lg">Contatti</a>
+            </nav>
+            <!-- Mobile Menu Placeholder -->
+            <button class="md:hidden text-gray-700 hover:color-secondary focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section (d'impatto) -->
+    <section id="hero" class="flex items-center justify-center text-center">
+        <div class="bg-black/40 p-10 rounded-xl max-w-2xl mx-4">
+            <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-4 leading-tight">
+                Vivi l'Avventura. <span class="text-blue-200">Connettiti.</span> Esplora.
+            </h1>
+            <p class="text-xl text-gray-200 mb-8">
+                Viaggi di gruppo per giovani esploratori (18-39 anni). Destinazioni da sogno, esperienze autentiche.
+            </p>
+            <a href="#itinerari" class="inline-block bg-white text-blue-600 font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-100 transition duration-300 transform hover:scale-105 shadow-xl">
+                Scopri gli Itinerari
+            </a>
+        </div>
+    </section>
+
+    <!-- Sezione Itinerari -->
+    <section id="itinerari" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center color-dark-text mb-12">I Nostri Itinerari Epici</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="itinerary-card bg-white rounded-xl shadow-lg overflow-hidden border border-blue-100">
+                    <img class="w-full h-48 object-cover" src="https://placehold.co/600x400/80b5ff/ffffff?text=Backpacking+Thailandia" alt="Backpacking in Thailandia">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold color-dark-text mb-2">Thailandia: Il Sentiero degli Dei</h3>
+                        <p class="text-gray-600 mb-4 text-sm">14 Giorni | Avventura & Relax. Esplora templi, giungle e spiagge segrete.</p>
+                        <div class="flex justify-between items-center text-sm font-medium">
+                            <span class="text-blue-500">A partire da €1499</span>
+                            <a href="#" class="text-blue-500 hover:text-blue-700 font-bold">Dettagli &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="itinerary-card bg-white rounded-xl shadow-lg overflow-hidden border border-blue-100">
+                    <img class="w-full h-48 object-cover" src="https://placehold.co/600x400/819FF7/ffffff?text=Spiagge+Caraibi" alt="Isola Caraibica">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold color-dark-text mb-2">Caraibi: Settimana Vele & Feste</h3>
+                        <p class="text-gray-600 mb-4 text-sm">7 Giorni | Mare & Social. Una crociera per l'anima, perfetta per connettersi.</p>
+                        <div class="flex justify-between items-center text-sm font-medium">
+                            <span class="text-blue-500">A partire da €1999</span>
+                            <a href="#" class="text-blue-500 hover:text-blue-700 font-bold">Dettagli &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="itinerary-card bg-white rounded-xl shadow-lg overflow-hidden border border-blue-100">
+                    <img class="w-full h-48 object-cover" src="https://placehold.co/600x400/6A82FB/ffffff?text=Safari+Africa" alt="Safari Africano">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold color-dark-text mb-2">Safari in Kenya: Wild & Brave</h3>
+                        <p class="text-gray-600 mb-4 text-sm">10 Giorni | Natura & Cultura. L'esperienza di una vita a contatto con la fauna.</p>
+                        <div class="flex justify-between items-center text-sm font-medium">
+                            <span class="text-blue-500">A partire da €2300</span>
+                            <a href="#" class="text-blue-500 hover:text-blue-700 font-bold">Dettagli &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#contatti" class="inline-block bg-blue-500 text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-blue-600 transition duration-300">
+                    Vedi tutte le Avventure
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Mete Paradisiache -->
+    <section id="mete" class="py-16 md:py-24 color-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center color-dark-text mb-12">Le Nostre Mete Paradisiache (Stay, Connect, Explore)</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Meta 1: Maldive sostenibili -->
+                <div class="bg-white rounded-xl shadow-lg p-5 flex flex-col items-center text-center">
+                    <span class="text-4xl mb-3" role="img" aria-label="Turtle">🐢</span>
+                    <h4 class="font-semibold color-dark-text">Maldive Eco</h4>
+                    <p class="text-sm text-gray-600">Non solo resort: scopri isole locali e progetti di sostenibilità.</p>
+                </div>
+                <!-- Meta 2: Tulum -->
+                <div class="bg-white rounded-xl shadow-lg p-5 flex flex-col items-center text-center">
+                    <span class="text-4xl mb-3" role="img" aria-label="Maya Temple">🏛️</span>
+                    <h4 class="font-semibold color-dark-text">Messico (Tulum)</h4>
+                    <p class="text-sm text-gray-600">Rovine Maya, Cenote nascosti e vibes bohémien in riva al mare.</p>
+                </div>
+                <!-- Meta 3: Giappone -->
+                <div class="bg-white rounded-xl shadow-lg p-5 flex flex-col items-center text-center">
+                    <span class="text-4xl mb-3" role="img" aria-label="Cherry Blossom">🌸</span>
+                    <h4 class="font-semibold color-dark-text">Giappone Autentico</h4>
+                    <p class="text-sm text-gray-600">Tra tradizione, cultura pop e natura incontaminata fuori dai percorsi turistici.</p>
+                </div>
+                <!-- Meta 4: Costa Rica -->
+                <div class="bg-white rounded-xl shadow-lg p-5 flex flex-col items-center text-center">
+                    <span class="text-4xl mb-3" role="img" aria-label="Rainforest">🐒</span>
+                    <h4 class="font-semibold color-dark-text">Costa Rica Pura Vida</h4>
+                    <p class="text-sm text-gray-600">Avventura pura: surf, vulcani e foreste pluviali (viaggi Blind universitari).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Consigli & Safety (Ispirata alla Guida del Viaggiatore) -->
+    <section id="consigli" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center color-dark-text mb-12">Consigli Utili per l'Esploratore</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                <!-- Colonna 1: Pianificazione -->
+                <div class="p-6 rounded-xl bg-blue-50 border-t-4 border-blue-500 shadow-md">
+                    <h3 class="text-2xl font-semibold color-dark-text mb-4">1. La Pianificazione Intelligente</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><span class="font-bold">Assicurazione:</span> Sempre fondamentale, mai partire senza.</li>
+                        <li><span class="font-bold">Documenti:</span> Controlla visti e passaporti per tempo.</li>
+                        <li><span class="font-bold">Budget:</span> Sfrutta le offerte <span class="text-blue-500">Early Booking</span>.</li>
+                    </ul>
+                </div>
+                <!-- Colonna 2: Bagaglio & Benessere -->
+                <div class="p-6 rounded-xl bg-blue-50 border-t-4 border-blue-500 shadow-md">
+                    <h3 class="text-2xl font-semibold color-dark-text mb-4">2. Leggeri e in Salute</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><span class="font-bold">Bagaglio:</span> Viaggia leggero, solo l'essenziale per muoversi velocemente.</li>
+                        <li><span class="font-bold">Benessere:</span> Idratati e rispetta le norme igieniche locali.</li>
+                        <li><span class="font-bold">Sicurezza:</span> Usa buonsenso e proteggi i tuoi effetti personali.</li>
+                    </ul>
+                </div>
+                <!-- Colonna 3: Adattabilità e Cultura -->
+                <div class="p-6 rounded-xl bg-blue-50 border-t-4 border-blue-500 shadow-md">
+                    <h3 class="text-2xl font-semibold color-dark-text mb-4">3. Impara e Rispetta</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li><span class="font-bold">Adattabilità:</span> Sii pronto agli imprevisti. Fa parte dell'avventura.</li>
+                        <li><span class="font-bold">Cultura:</span> Impara frasi locali e mostra rispetto per l'ambiente e le tradizioni.</li>
+                        <li><span class="font-bold">Connessione:</span> Apriti a incontrare gente del posto e altri viaggiatori.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sezione Commenti degli Utenti -->
+    <section id="commenti" class="py-16 md:py-24 color-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center color-dark-text mb-12">Dicono di Noi: La Nostra Community</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Commento 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-blue-100">
+                    <p class="italic text-gray-700 mb-4">"Il viaggio in Vietnam è stato epico! Ho conosciuto persone fantastiche e l'organizzazione è stata impeccabile, lasciando spazio all'imprevisto e all'avventura vera."</p>
+                    <div class="flex items-center">
+                        <img class="w-10 h-10 rounded-full mr-3" src="https://placehold.co/40x40/60a5fa/ffffff?text=M" alt="Foto di Marco">
+                        <div>
+                            <p class="font-semibold color-dark-text">Marco D.</p>
+                            <p class="text-sm text-gray-500">Viaggio Vietnam (2024)</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Commento 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-blue-100">
+                    <p class="italic text-gray-700 mb-4">"Il viaggio Blind è stato una sorpresa meravigliosa. L'adrenalina di non sapere la meta fino all'ultimo, unita al gruppo super energico, ha reso tutto indimenticabile."</p>
+                    <div class="flex items-center">
+                        <img class="w-10 h-10 rounded-full mr-3" src="https://placehold.co/40x40/60a5fa/ffffff?text=C" alt="Foto di Chiara">
+                        <div>
+                            <p class="font-semibold color-dark-text">Chiara S.</p>
+                            <p class="text-sm text-gray-500">Viaggio Blind (Estate 2023)</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Commento 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-blue-100">
+                    <p class="italic text-gray-700 mb-4">"Ho usato la Carta Giovani per uno sconto sull'Early Booking e ho potuto pagare a rate con Scalapay. Viaggiare non è mai stato così facile e accessibile, specialmente per noi studenti!"</p>
+                    <div class="flex items-center">
+                        <img class="w-10 h-10 rounded-full mr-3" src="https://placehold.co/40x40/60a5fa/ffffff?text=L" alt="Foto di Luca">
+                        <div>
+                            <p class="font-semibold color-dark-text">Luca Z.</p>
+                            <p class="text-sm text-gray-500">Cliente abituale</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form di Contatto (Call to Action) -->
+    <section id="contatti" class="py-16 md:py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 bg-blue-50 p-10 rounded-xl shadow-2xl border-t-8 border-blue-500">
+            <h2 class="text-3xl font-bold text-center color-dark-text mb-4">Pronto a Partire? Parlaci del Tuo Sogno!</h2>
+            <p class="text-center text-gray-600 mb-8">Compila il form e ti contatteremo per creare il tuo prossimo viaggio indimenticabile, senza impegno.</p>
+            
+            <form action="#" method="POST" class="space-y-6">
+                <!-- Campo Nome -->
+                <div>
+                    <label for="name" class="block text-sm font-medium color-dark-text">Nome e Cognome</label>
+                    <input type="text" id="name" name="name" required
+                           class="mt-1 block w-full px-4 py-3 border border-blue-200 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 transition duration-150"
+                           placeholder="Mario Rossi">
+                </div>
+                
+                <!-- Campo Email -->
+                <div>
+                    <label for="email" class="block text-sm font-medium color-dark-text">Indirizzo Email</label>
+                    <input type="email" id="email" name="email" required
+                           class="mt-1 block w-full px-4 py-3 border border-blue-200 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 transition duration-150"
+                           placeholder="mario.rossi@esempio.com">
+                </div>
+
+                <!-- Campo Itinerario Preferito -->
+                <div>
+                    <label for="itinerary" class="block text-sm font-medium color-dark-text">Qual è il tuo itinerario dei sogni?</label>
+                    <select id="itinerary" name="itinerary" required
+                            class="mt-1 block w-full px-4 py-3 border border-blue-200 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 transition duration-150 bg-white">
+                        <option value="">Seleziona un'opzione</option>
+                        <option value="thailandia">Thailandia: Il Sentiero degli Dei</option>
+                        <option value="caraibi">Caraibi: Settimana Vele & Feste</option>
+                        <option value="safari">Safari in Kenya: Wild & Brave</option>
+                        <option value="blind">Viaggio Blind (Sorpresa!)</option>
+                        <option value="altro">Altro (Specificare nel messaggio)</option>
+                    </select>
+                </div>
+                
+                <!-- Campo Messaggio (Opzionale, ma utile) -->
+                <div>
+                    <label for="message" class="block text-sm font-medium color-dark-text">Il tuo Messaggio/Domanda (opzionale)</label>
+                    <textarea id="message" name="message" rows="4"
+                              class="mt-1 block w-full px-4 py-3 border border-blue-200 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 transition duration-150"
+                              placeholder="Raccontaci brevemente cosa cerchi..."></textarea>
+                </div>
+                
+                <div class="text-center">
+                    <button type="submit"
+                            class="w-full sm:w-auto inline-flex justify-center items-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-blue-500 hover:bg-blue-600 transition duration-300 shadow-xl transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-300">
+                        Invia Richiesta di Viaggio
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+            <p>&copy; 2024 Wanderlust. Viaggi Avventura per Giovani. | P.IVA 01234567890</p>
+            <p class="mt-2 text-gray-400">
+                <a href="#" class="hover:text-blue-400 mx-2">Privacy Policy</a> |
+                <a href="#" class="hover:text-blue-400 mx-2">Termini e Condizioni</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
