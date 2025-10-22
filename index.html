@@ -240,7 +240,13 @@
             <h2 class="text-3xl font-bold text-center color-dark-text mb-4">Pronto a Partire? Parlaci del Tuo Sogno!</h2>
             <p class="text-center text-gray-600 mb-8">Compila il form e ti contatteremo per creare il tuo prossimo viaggio indimenticabile, senza impegno.</p>
             
-            <form action="#" method="POST" class="space-y-6">
+            <!-- FORM AGGIORNATO PER GETRESPONSE -->
+            <form action="https://app.getresponse.com/add_subscriber.html" method="POST" class="space-y-6">
+                <!-- CAMPO NASCOSTO: TOKEN DELLA LISTA GETRESPONSE -->
+                <input type="hidden" name="campaign_token" value="XNSUV" />
+                <!-- CAMPO NASCOSTO: URL di ringraziamento (Reindirizza all'inizio della pagina dopo l'invio) -->
+                <input type="hidden" name="thankyou_url" value="#hero" />
+
                 <!-- Campo Nome -->
                 <div>
                     <label for="name" class="block text-sm font-medium color-dark-text">Nome e Cognome</label>
@@ -257,10 +263,10 @@
                            placeholder="mario.rossi@esempio.com">
                 </div>
 
-                <!-- Campo Itinerario Preferito -->
+                <!-- Campo Itinerario Preferito (rinominato in custom_itinerario per GetResponse) -->
                 <div>
                     <label for="itinerary" class="block text-sm font-medium color-dark-text">Qual è il tuo itinerario dei sogni?</label>
-                    <select id="itinerary" name="itinerary" required
+                    <select id="itinerary" name="custom_itinerario" required
                             class="mt-1 block w-full px-4 py-3 border border-blue-200 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 transition duration-150 bg-white">
                         <option value="">Seleziona un'opzione</option>
                         <option value="thailandia">Thailandia: Il Sentiero degli Dei</option>
@@ -271,10 +277,10 @@
                     </select>
                 </div>
                 
-                <!-- Campo Messaggio (Opzionale, ma utile) -->
+                <!-- Campo Messaggio (rinominato in custom_messaggio per GetResponse) -->
                 <div>
                     <label for="message" class="block text-sm font-medium color-dark-text">Il tuo Messaggio/Domanda (opzionale)</label>
-                    <textarea id="message" name="message" rows="4"
+                    <textarea id="message" name="custom_messaggio" rows="4"
                               class="mt-1 block w-full px-4 py-3 border border-blue-200 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 transition duration-150"
                               placeholder="Raccontaci brevemente cosa cerchi..."></textarea>
                 </div>
